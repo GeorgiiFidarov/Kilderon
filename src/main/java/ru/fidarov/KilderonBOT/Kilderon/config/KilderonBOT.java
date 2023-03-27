@@ -56,36 +56,6 @@ public class KilderonBOT extends TelegramLongPollingBot {
 
         }
     }
-    
-//    public String chatGPT(String text) throws Exception {
-//        String url = "https://api.openai.com/v1/chat/completions";
-//        HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
-//
-//        con.setRequestMethod("POST");
-//        con.setRequestProperty("Content-Type", "application/json");
-//        con.setRequestProperty("Authorization", "Bearer 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");
-//
-//        JSONObject data = new JSONObject();
-//        Map<String,String> map = new HashMap<>();
-//        map.put("role","assistant");
-//        map.put("content",text);
-//        List<Map<String,String>> listOfMap = Arrays.asList(map);
-//        data.put("model", "gpt-3.5-turbo");
-//        data.put("messages",listOfMap);
-//        data.put("temperature", 1.0);
-//        con.setDoOutput(true);
-//        con.getOutputStream().write(data.toString().getBytes());
-//
-//        String output = new BufferedReader(new InputStreamReader(con.getInputStream())).lines()
-//                .reduce((a, b) -> a + b).get();
-//        System.out.println(text);
-//
-//        return new JSONObject(output)
-//                .getJSONArray("choices")
-//                .getJSONObject(0)
-//                .getJSONObject("message")
-//                .getString("content");
-//    }
     @Override
     public String getBotUsername() {
         return "KilderonBot";
